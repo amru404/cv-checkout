@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cart</title>
+    <style>
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            display: inline;
+         }
+         
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%; /* Should be removed. Only for demonstration */
+        }
+
+        .col-4 {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+          }
+
+          .col-8 {
+            float: left;
+            width: 60%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+          }
+        
+        .col {
+          float: left;
+          width: 32%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .container{
+          margin: 30px;
+          margin-top: -15px;
+        }
+        </style>
+</head>
+<body>
+    <div class="navbar" style="border: 1px solid black;background-color:lightgrey;">
+        <table>
+            <thead>
+                <div class="content">
+                    <th>
+                        <h3 style="margin-left: 30px;">Toko abu</h2>
+                    </th>
+                    <th>
+                        <a href="" style="margin-left:30px;">Category 1 | </a> <a href="">Category 2 | </a> <a href="">Category 3</a>
+                    </th>
+                    <th>
+                        <p style="margin-left:800px ;"><svg xmlns="http://www.w3.org/2000/svg" style="height:15px ;" viewBox="0 0 512 512">><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></p>
+                    </th>
+                    <th>
+                        <i class="fa-solid fa-cart-shopping"></i>   
+                    </th>
+                    <th>
+                        Cart(1) 
+                    </th>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="col-8">
+                <h1>Your Cart</h1>
+                <table border = 1 style=" border-collapse: collapse; width:100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                Item
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="https://cdn.shopify.com/s/files/1/2358/2817/products/Air-Jordan-1-High-OG-Heritage-1.png?v=1649329424" style="height:80px ;" alt="">
+                                        
+                                </div>
+                                <div class="column">
+                                    <p >Jordan 1</p>
+                                    <p >Size : 43</p>
+
+                                </div>
+                            </div>
+                            
+                        </td>
+                        <td>
+                                <h2><center>Rp.20.000</center></h2>
+                            </td>
+                            <td>
+                                <center>
+                                <select name="quantity" id="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p style="text-align:right;"><b>Subtotal : </b>Rp.20.000</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="card"style="border: 1px solid grey;background-color:lightgrey; height:auto">
+                    <h4 style="margin-left:20px ;">Sumarry (1 Item)</h4>
+                    <p style="margin:20px">Subtotal <span style="float: right;">Rp.20.000</span></p>
+                    <p style="margin:20px">Shipping <span style="float: right;">-</span></p>
+                    <p style="margin:20px">Pajak <span style="float: right;">-</span></p>
+                    <div style="background-color:white; width:90%;height:2px;margin: auto;"></div>
+                    <p style="margin:20px">Total <span style="float: right;">RP.20.000</span></p>
+                    
+                    <a href="checkout.html">
+                        <button style="width:90%; background-color:rgb(67, 89, 255); color:white; margin-left:20px; margin-bottom:20px;">Checkout</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <table style="font-size:15px ;">
+            <thead>
+                <div class="content" >
+                    <th>
+                        <h3 style="margin-left: 30px;">Toko abu</h2>
+                    </th>
+                    <th>
+                        <a href="" style="margin-left:30px;">Category 1 | </a> <a href="">Category 2 | </a> <a href="">Category 3</a>
+                    </th>
+                    <th>
+                       <p style="margin-left:700px ;">Stay in touch join your newslater</p>
+                    </th>
+                </thead>
+            </table>
+            
+            <table style="font-size:15px ; margin-top:-20px;">
+                <thead>
+                    <div class="content" > 
+                        <th>
+                            <button style="background-color:lightgrey;margin-left:30px;">bca</button>
+                            <button style="background-color:lightgrey;">ovo</button>
+                            <button style="background-color:lightgrey;">gopay</button>
+                        </th>
+                        <th>
+                            <input type="text" placeholder="Enter Email" style="width:100px ;margin-left:900px ;"> <button style="background-color:grey;color:white">subscribe</button> 
+                        </th>
+                    </thead>
+                </table>
+    </div>
+
+        
+    
+</body>
+</html>
